@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<span style = "float: left; margin-left: 10px;"><h3>{{ project.title }}</h3></span><span style="float: right; margin-right: 10px;"><h3><a href="{% url 'project_index' %}">Back to Projects</a></h3></span></br></br>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{% static project.image %}" alt="" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <p>{{ project.description }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ project.technology }}</p>
+    </div>
+</div>
+{% endblock %}
