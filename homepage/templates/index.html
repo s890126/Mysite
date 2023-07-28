@@ -1,5 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block page_content %}
-
+{% extends "base.html" %}{% load static %} {% block page_content %}
 
 <style>
   body {
@@ -13,13 +12,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
   }
 
   .profile-pic {
     max-width: 300px;
     border-radius: 50%;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-bottom: 20px;
   }
 
@@ -45,15 +43,18 @@
     font-size: 35px;
     color: #666;
   }
-
 </style>
 
-
-
-
-<div class="container">
-  <!-- Profile Picture Section -->
-  <div>
+<!-- Profile Picture Section -->
+<div>
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    "
+  >
     <img
       class="profile-pic"
       src="{% static home.image %}"
@@ -64,21 +65,39 @@
   <!-- Skill Sets Section -->
   <div class="skillset">
     <h2>Skill Sets</h2>
-    <ul>
-      <li>Python</li>
-      <li>Django</li>
-      <li>Java</li>
-      <li>HTML/CSS/JavaScript</li>
-      <li>Git</li>
-      <li>SQL</li>
-      <!-- Add more skill sets here -->
-    </ul>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <ul>
+        <li>Python</li>
+        <li>Django</li>
+        <li>Java</li>
+        <li>HTML/CSS/JavaScript</li>
+        <li>Git</li>
+        <li>SQL</li>
+        <!-- Add more skill sets here -->
+      </ul>
+    </div>
   </div>
 
   <!-- Description Section -->
   <div>
     <h2>About Me</h2>
-    <p>{{home.description}}</p>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <p>{{home.description}}</p>
+    </div>
   </div>
 </div>
 {% endblock %}
